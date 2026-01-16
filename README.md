@@ -9,7 +9,7 @@ Standard Operating Procedures (SOPs) define approved workflows, testing steps,
 and documentation requirements intended to ensure consistency and regulatory compliance.
 In practice, however, SOPs often specify what must be done without fully resolving
 how ambiguous or exceptional situations should be judged.
-As a result, analysts are frequently required to interpret procedures arbitrarily
+As a result, analysts are frequently required to interpret procedures independently
 and make judgment calls that are not explicitly addressed in the written guidance.
 
 ## What is cognitive friction?
@@ -39,7 +39,7 @@ to making judgment demands embedded in procedural text visible and comparable.
 ## What this repository includes
 - A Jupyter notebook (`sop_cognitive_friction_pilot.ipynb`) demonstrating
   rule-based detection of structural features associated with cognitive friction
-  (e.g., conditional branching, exception handling, obligation cues).
+  (e.g., conditional branching, exceptㄹion handling, obligation cues).
 - A small set of synthetic SOP sentences used for illustrative analysis.
 
 ## Scope and limitations
