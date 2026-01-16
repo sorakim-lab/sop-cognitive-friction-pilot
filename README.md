@@ -53,7 +53,7 @@ in regulated work systems.
 
 ## How this connect to the paper
 This repository accompanies the exploratory pilot study
-**“Sentence-Level Cognitive Friction in SOPs: An Exploratory Pilot.”*
+**“Sentence-Level Cognitive Friction in SOPs: An Exploratory Pilot.”**
 
 The code implements a lightweight, rule-based version of the sentence-level
 annotation framework described in the paper. Its purpose is not to automate
