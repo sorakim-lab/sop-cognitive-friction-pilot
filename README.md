@@ -61,10 +61,14 @@ rendering judgment demands embedded in procedural text analytically visible.
 
 ## Repository contents
 
-- `sop_cognitive_friction_pilot.ipynb` — rule-based sentence annotation demo  
-- `example_sentences.csv` — synthetic procedural sentences  
-- `annotation_output_example.csv` — annotated example output  
+- **CF_corpus500_annotation.ipynb**  
+  Python notebook implementing the rule-based annotation procedure for
+  sentence-level cognitive friction features across the 500-sentence corpus.
 
+- **public_procedural_corpus_500_mixed.xlsx**  
+  Mixed procedural corpus (N = 500) combining publicly derived and
+  synthetic SOP-like sentences used in the exploratory analysis.
+  
 ---
 
 ## Annotation logic
