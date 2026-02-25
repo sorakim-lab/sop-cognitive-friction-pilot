@@ -1,72 +1,143 @@
-# SOP Cognitive Friction Pilot
+# SOP Cognitive Friction — Rule-Based Annotation Prototype
 
-This repository presents a lightweight, rule-based pilot implementation
-exploring sentence-level cognitive friction in SOPs.
+This repository provides a lightweight, rule-based implementation of the
+sentence-level cognitive friction annotation framework described in:
+
+**Kim, S. (2026). _Structuring Judgment, Stabilizing Responsibility:
+Cognitive Friction in Procedural Texts._**
+
+The code demonstrates how structurally embedded judgment demands in procedural
+language can be operationalized and annotated computationally at the sentence level.
+
+---
 
 ## What is an SOP?
-In regulatory laboratory environments in the biopharmaceutical field,
-Standard Operating Procedures (SOPs) define approved workflows, testing steps,
-and documentation requirements intended to ensure consistency and regulatory compliance.
-In practice, however, SOPs often specify what must be done without fully resolving
-how ambiguous or exceptional situations should be judged.
-As a result, analysts are frequently required to interpret procedures independently
-, introducing judgment calls that are not explicitly addressed in the written guidance.
+
+In regulated laboratory and biopharmaceutical environments, Standard Operating
+Procedures (SOPs) define approved workflows, testing steps, and documentation
+requirements intended to ensure consistency and regulatory compliance.
+
+In practice, SOPs often specify what must be done without fully resolving how
+ambiguous or exceptional situations should be judged. As a result, practitioners
+frequently interpret procedures locally during execution, introducing judgment
+calls that are not explicitly resolved within the written instruction.
+
+---
 
 ## What is cognitive friction?
-Cognitive friction refers to the additional mental effort imposed on individuals
-when procedural instructions require interpretation, judgment, or reconciliation
-across fragmented or ambiguous guidance.
-In the context of SOPs, cognitive friction arises not from document length alone,
-but from structural features that embed judgment demands within routine tasks.
 
-## What this pilot does
-This pilot performs a sentence-level annotation of representative SOP sentences
-to examine whether predefined structural features associated with cognitive friction
-can be made observable and consistently identified using simple, rule-based criteria.
+Cognitive friction refers to structurally embedded judgment demands in
+procedural language that require actors to interpret, reconcile, or condition
+instructions during execution.
 
-Specifically, each sentence is assessed for the presence or absence of five
-theory-driven categories:
-- cross-references to external documents  
+In SOP-like texts, cognitive friction arises not from document length alone but
+from specific structural features that embed contingent pathways, deferred
+criteria, or discretionary qualifiers within procedural sentences.
+
+---
+
+## What this prototype does
+
+This prototype performs sentence-level annotation of procedural sentences to
+demonstrate that predefined structural features associated with cognitive
+friction can be made observable and consistently identified using transparent,
+rule-based criteria.
+
+Each sentence is evaluated for the presence of four cognitive friction features:
+
 - conditional branching  
-- exception handling  
-- obligation cues  
-- sentence length exceeding a predefined threshold  
+- cross-references  
+- exception structures  
+- discretionary qualifiers  
 
-The goal of this pilot is not to quantify cognitive load or predict error outcomes,
-but to demonstrate the feasibility and interpretability of a structured approach
-for making judgment demands embedded in procedural text visible and comparable.
+A composite cognitive friction score is computed as the co-occurrence count of
+these features within each sentence.
 
-## What this repository includes
-- A Jupyter notebook (`sop_cognitive_friction_pilot.ipynb`) demonstrating
-  rule-based detection of sentence-level structural features associated with cognitive friction
-  (e.g., conditional branching, exception handling, obligation cues).
-- A small set of synthetic SOP sentences used for illustrative analysis.
+The goal is not to predict cognitive load or performance outcomes, but to
+demonstrate the feasibility and interpretability of a structured approach for
+rendering judgment demands embedded in procedural text analytically visible.
+
+---
+
+## Repository contents
+
+- `sop_cognitive_friction_pilot.ipynb` — rule-based sentence annotation demo  
+- `example_sentences.csv` — synthetic procedural sentences  
+- `annotation_output_example.csv` — annotated example output  
+
+---
+
+## Annotation logic
+
+Each sentence is evaluated using deterministic lexical–syntactic patterns.
+
+Example cues:
+
+- Conditional: `if`, `when`, `unless`, `where applicable`  
+- Cross-reference: `section`, `annex`, `per SOP`, `in accordance with`  
+- Exception: `except`, `otherwise`, `unless otherwise specified`  
+- Discretion: `as appropriate`, `as deemed necessary`, `if needed`  
+
+Composite score:
+friction_score = conditional + cross_reference + exception + discretion
+
+---
 
 ## Scope and limitations
-This repository is intended as an exploratory pilot
-and relies on synthetic examples and lightweight heuristics
-to demonstrate feasibility rather than to provide empirical validation.
+
+This implementation reflects the conceptual operationalization presented in the
+paper and is intentionally simplified.
+
+- Rule-based patterns approximate structural cues rather than full parsing  
+- Annotation targets sentence-level procedural units only  
+- Synthetic examples are used for illustration  
+- No attempt is made to model actor cognition or decision processes  
+
+The prototype is intended for methodological transparency and conceptual
+demonstration rather than predictive or production use.
+
+---
+
+## Relation to the paper
+
+This repository accompanies the cognitive friction framework introduced in:
+
+**Kim, S. (2026). _Structuring Judgment, Stabilizing Responsibility:
+Cognitive Friction in Procedural Texts._**
+
+The implementation demonstrates that structurally embedded judgment demands in
+procedural documentation can be rendered computationally observable using
+transparent rule-based annotation at the sentence level.
+
+It supports the paper’s methodological claim that responsibility-bearing
+interpretive demands encoded in procedural language can be systematically
+identified without reliance on complex NLP models or large-scale corpora.
+
+---
 
 ## Status
-This project is part of an ongoing line of inquiry into judgment and cognitive load
-in regulated work systems.
 
-## How this connect to the paper
-This repository accompanies the exploratory pilot study
-**“Sentence-Level Cognitive Friction in SOPs: An Exploratory Pilot.”**
+This repository is part of an ongoing research program on responsibility,
+judgment, and documentation in regulated sociotechnical systems.
 
-The code implements a lightweight, rule-based version of the sentence-level
-annotation framework described in the paper. Its purpose is not to automate
-judgment or to evaluate model performance, but to demonstrate that the proposed
-concept of cognitive friction can be rendered observable and computationally
-expressible at the sentence level.
+---
 
-Specifically, the repository:
-- mirrors the five structural features introduced in the paper,
-- applies them to synthetic SOP sentences for illustrative analysis, and
-- supports the paper’s methodological claim that judgment demands embedded in
-procedural language can be systematically identified without reliance on
-complex models or large datasets.
+## License
 
-The implementation is intended for transparency and conceptual demonstration
-rather than for production use or empirical deployment.
+MIT License
+
+## Source materials
+ 
+Procedural sentences in this repository were extracted or adapted from
+publicly available regulatory and safety documentation, including
+laboratory and biosafety guidance published by international and
+academic institutions.
+ 
+All source documents are publicly accessible PDFs. Sentences were
+parsed and selected solely for non-commercial research and illustrative
+purposes. Some examples are lightly adapted for clarity, and additional
+sentences are fully synthetic constructions designed to approximate
+SOP-like procedural structure.
+ 
+This repository does not redistribute full original documents and
+contains no proprietary or confidential SOP content.
