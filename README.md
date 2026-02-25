@@ -126,22 +126,22 @@ judgment, and documentation in regulated sociotechnical systems.
 
 ---
 
-## License
+## Source Materials
 
-MIT License
-
-## Source materials
- 
 Procedural sentences in this repository were extracted or adapted from
 publicly available regulatory and safety documentation, including
 laboratory and biosafety guidance published by international and
-academic institutions.
- 
+academic institutions such as WHO, MIT, and Yale EHS.
+
 All source documents are publicly accessible PDFs. Sentences were
 parsed and selected solely for non-commercial research and illustrative
 purposes. Some examples are lightly adapted for clarity, and additional
 sentences are fully synthetic constructions designed to approximate
 SOP-like procedural structure.
- 
+
 This repository does not redistribute full original documents and
 contains no proprietary or confidential SOP content.
+
+## License
+
+MIT License
