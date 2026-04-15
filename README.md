@@ -2,7 +2,7 @@
 
 This repository provides a lightweight, rule-based implementation of the sentence-level cognitive friction annotation framework described in:
 
-**Kim, S. (2026). _Structuring Judgment, Stabilizing Responsibility: Cognitive Friction in Procedural Texts._ SSRN Preprint.**
+**Kim, S. (2026). _Cognitive Friction: Procedural Documents as Accountability Infrastructure in Regulated Organizations._ SSRN Preprint.**
 
 The code demonstrates how structurally embedded judgment demands in procedural language can be operationalized and annotated computationally at the sentence level.
 
@@ -95,7 +95,7 @@ The prototype is intended for methodological transparency and conceptual demonst
 
 This repository is part of a broader research program on responsibility structuring in regulated sociotechnical systems:
 
-- [Anticipated Accountability Convergence (AAC)](https://ssrn.com) — SSRN Preprint
+- [Anticipated Accountability Convergence (AAC)](https://ssrn.com/abstract=6371980) — SSRN Preprint
 - [Responsibility Convergence in Organizational Investigations (RC)](https://ssrn.com) — SSRN Preprint
 - [Premature Accountability Convergence (PAC)](https://ssrn.com) — SSRN Preprint
 - [FDA Warning Letters — PAC Analysis](https://github.com/sorakim-lab/fda-warning-letters-pac-analysis) — GitHub
@@ -115,8 +115,8 @@ This repository does not redistribute full original documents and contains no pr
 ## Citation
 
 ```
-Kim, S. (2026). Structuring Judgment, Stabilizing Responsibility:
-Cognitive Friction in Procedural Texts. SSRN Preprint.
+Kim, S. (2026). Cognitive Friction: Procedural Documents as Accountability
+Infrastructure in Regulated Organizations. SSRN Preprint.
 ```
 
 ---
