@@ -45,9 +45,11 @@ The goal is not to predict cognitive load or performance outcomes, but to demons
 
 | File | Description |
 |------|-------------|
-| `CF_corpus500_annotation.ipynb` | Rule-based annotation procedure for sentence-level cognitive friction features across the 500-sentence corpus |
+| `CF_corpus500_annotation.ipynb` | Rule-based annotation procedure for sentence-level cognitive friction features across the full 500-sentence corpus |
 | `CF_corpus500_robustness_check.ipynb` | Robustness analysis replicating core findings on the 400 naturally occurring sentences (excluding synthetic subset) |
 | `public_procedural_corpus_500_mixed.xlsx` | Mixed procedural corpus (N=500) combining publicly derived and synthetic SOP-like sentences |
+
+> **Note on corpus scope:** The paper's analysis draws on the 400 naturally occurring sentences (`source_tag != 'synthetic'`). The full corpus of 500 sentences is provided for transparency and methodological replication. Core findings reported in the paper are based on the naturally occurring subset; robustness analyses confirming their stability are available in `CF_corpus500_robustness_check.ipynb`.
 
 ---
 
@@ -71,9 +73,13 @@ friction_score = conditional + cross_reference + exception + discretion
 
 ## Key Findings
 
-- Conditional branching is the most prevalent friction feature (33.8% of sentences)
-- Structurally compounded judgment demands concentrate in a smaller subset of sentences (10.6% with friction score ≥ 2)
-- Non-zero friction appears consistently across all source categories — including naturally occurring procedural documentation
+Based on the 400 naturally occurring sentences:
+
+- Conditional branching is the most prevalent friction feature (26.2% of sentences)
+- Discretionary qualifiers and cross-references appear at comparable rates (~13.2% and ~11.8%)
+- Exception structures are less frequent (1.5%) but organizationally consequential
+- Structurally compounded judgment demands concentrate in a smaller subset of sentences (7.0% with friction score ≥ 2)
+- Non-zero friction appears consistently across all three source categories (BSL3: M=0.47, WHO: M=0.50, chemical: M=0.60)
 - Robustness analysis on 400 naturally occurring sentences confirms that core distributional patterns hold independently of the synthetic subset
 
 ---
@@ -84,7 +90,7 @@ This implementation reflects the conceptual operationalization presented in the 
 
 - Rule-based patterns approximate structural cues rather than full parsing
 - Annotation targets sentence-level procedural units only
-- Synthetic examples are used for illustration
+- Synthetic examples are included in the full corpus for structural illustration but excluded from the paper's primary analysis
 - No attempt is made to model actor cognition or decision processes
 
 The prototype is intended for methodological transparency and conceptual demonstration rather than predictive or production use.
